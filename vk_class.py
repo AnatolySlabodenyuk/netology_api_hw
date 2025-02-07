@@ -13,7 +13,7 @@ class VKApi:
             'v': v
         }
 
-    def _get_photos_items(self, owner_id: str, count: int, album_id: str = 'profile', extended: int = 1) -> list:
+    def _get_photos_items(self, owner_id: str, count: int, album_id: str = 'profile', extended: int = 1) -> list | None:
         params = {
             'owner_id': owner_id,
             'count': count,

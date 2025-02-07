@@ -27,7 +27,7 @@ class YDApi:
         except Exception as err:
             logger.error(f"Ошибка при создании папки: {err}")
 
-    def _get_upload_href(self, path_to_upload_file_in_disk: str) -> str:
+    def _get_upload_href(self, path_to_upload_file_in_disk: str) -> str | None:
         get_upload_href_params = {
             'path': path_to_upload_file_in_disk
         }
